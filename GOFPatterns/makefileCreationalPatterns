@@ -1,0 +1,2 @@
+all: AbstractFactory_001 Factory_001 \
+	Without_AbstractFactory_001 Without_Factory_001 

@@ -23,7 +23,7 @@ public:
    void execute() { a();  _2();  c();  _4();  e(); }
 };
 
-void main( void ) {
+int main( void ) {
    One first;
    first.execute();
    cout << '\n';

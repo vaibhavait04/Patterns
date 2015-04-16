@@ -37,7 +37,7 @@ public:
          list[i]->execute( num );
 }  };
 
-void main( void ) {
+int main( void ) {
    Number object;
    Command* commands[3];
    commands[0] = &SimpleCommand( &object, &Number::dubble );

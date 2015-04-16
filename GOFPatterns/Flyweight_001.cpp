@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 const int X = 6;
 const int Y = 10;
@@ -38,7 +39,7 @@ private:
 Gazillion*  Factory::pool_[]  = {
                          0,0,0,0,0,0 };
 
-void main( void )
+int main( void )
 {
    for (int i=0; i < X; i++)
    {

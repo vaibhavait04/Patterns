@@ -12,9 +12,11 @@
 // requests from the client are simply delegated by the interface class to
 // the encapsulated implementation class.
 
-#include <iostream.h>
-#include <iomanip.h>
-#include <string.h>
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std; 
 
 class TimeImp {
 public:
@@ -77,7 +79,7 @@ public:
 };
 
 
-void main() {
+int main() {
    Time*  times[3];
    times[0] = new Time( 14, 30 );
    times[1] = new CivilianTime( 2, 30, 1 );

@@ -46,7 +46,7 @@ class AwithXYZ : public AwithX, public AwithY, public AwithZ { public:
       AwithZ::doZ();
 }  };
 
-void main( void ) {
+int main( void ) {
    AwithX    anX;
    AwithXY   anXY;
    AwithXYZ  anXYZ;

@@ -8,8 +8,8 @@
 // adapter class "maps" or "impedance matches" the new interface to the
 // old implementation.
 
-#include <iostream.h>
-
+#include <iostream>
+using namespace std; 
 typedef int Coordinate;
 typedef int Dimension;
 
@@ -49,7 +49,7 @@ public:
       oldDraw(); }
 };
 
-void main() {
+int main() {
    Rectangle*  r = new RectangleAdapter( 120, 200, 60, 40 );
    r->draw();
 }

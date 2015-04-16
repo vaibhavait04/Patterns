@@ -12,7 +12,9 @@
 // If new State classes are added, then every Cmd class must be changed, and
 // Visitor is NOT the right approach to take.
 
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
+
 int  current = 0;
 class One;  class Two;
 
@@ -51,7 +53,7 @@ class Two : public State { public:
 
 State* states[] = { new One, new Two };
 
-void main( void )
+int main( void )
 {
    Cmd* c[] = { new Off,
         new On, new Off, new Off, 0 };

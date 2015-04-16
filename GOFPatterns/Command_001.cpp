@@ -48,7 +48,7 @@ private:
    int cash_;
 };
 
-void main( void )
+int main( void )
 {
    Deadbeat joe(90), tom(90);
    IOU one(&joe, &Deadbeat::payUp, 60);

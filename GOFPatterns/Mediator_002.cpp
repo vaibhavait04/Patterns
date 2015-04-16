@@ -16,7 +16,8 @@
 // The user may choose to "interact" with a simulated: filter edit field,
 // directories list, files list, or selection edit field.
 
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class FileSelectionDialog;
 
@@ -90,7 +91,7 @@ void Widget::changed() {
 	_mediator->widgetChanged( this ); }
 
 
-void main() {
+int main() {
 	FileSelectionDialog fileDialog;
 	int                 i;
 

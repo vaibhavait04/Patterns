@@ -14,7 +14,7 @@ public:
 };
 int Image::next = 1;
 
-void main( void ) {
+int main( void ) {
    Image images[5];
    int   i;
 

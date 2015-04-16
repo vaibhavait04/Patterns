@@ -1,4 +1,7 @@
 // Purpose.  "A protection proxy controls access to the original object."
+#include <iostream> 
+using namespace std; 
+
 
 class Person {
    string nameString;
@@ -34,7 +37,7 @@ public:
    int getBalance() { return realThing.getBalance(); }
 };
 
-void main( void ) {
+int main( void ) {
    PettyCash  pc;
    Person     workers[4];
    for (int i=0, amount=100; i < 4; i++, amount += 100)

@@ -13,7 +13,8 @@
 // two phone calls a week for 5 months, and a completed service request
 // results.
 
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class MisDepartment {
 public:
@@ -107,7 +108,7 @@ private:
 	MisDepartment         _technician;
 };
 
-void main() {
+int main() {
 	FacilitiesFacade  facilities;
 
 	facilities.submitNetworkRequest();

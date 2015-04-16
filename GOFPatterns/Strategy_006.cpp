@@ -12,9 +12,10 @@
 // models an application class that would like to leverage the services of
 // a run-time-specified derived "Strategy" object.
 
-#include <iostream.h>
-#include <fstream.h>
-#include <string.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std; 
 
 class Strategy;
 
@@ -97,7 +98,7 @@ void TestBed::setStrategy( int type, int width ) {
 
 void TestBed::doIt() { strategy_->format(); }
 
-void main() {
+int main() {
    TestBed  test;
    int      answer, width;
    cout << "Exit(0) Left(1) Right(2) Center(3): ";

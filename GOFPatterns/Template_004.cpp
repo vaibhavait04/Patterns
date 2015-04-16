@@ -42,7 +42,7 @@ class Numeric : public StandardAlgorithm {
       else return false;
 }  };
 
-void main( void ) {
+int main( void ) {
    StandardAlgorithm* types[] = { &Alphabetic(), &Numeric() };
    char buf[20];
    while (true) {

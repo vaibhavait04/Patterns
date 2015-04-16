@@ -40,7 +40,7 @@ public:
    void read(  string& );
 };
 
-void main( void ) {
+int main( void ) {
    Interface* object = new Wrapper( new Wrapper( new Wrapper(
                           new Core(), "123" ), "abc" ), "987" );
    string buf;

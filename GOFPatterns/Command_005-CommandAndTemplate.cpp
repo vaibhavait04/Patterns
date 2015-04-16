@@ -36,7 +36,7 @@ private:
    ARG    argument;
 };
 
-void main( void ) {
+int main( void ) {
    Command<A,int>* list1[4] = {
       &Command<A,int>( &A(3), &A::divide,  16 ),
       &Command<A,int>( &A(3), &A::modulus, 16 ),

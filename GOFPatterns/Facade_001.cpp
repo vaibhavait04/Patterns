@@ -1,5 +1,6 @@
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+using namespace std; 
 #define sl strlen
 
 class Compute {
@@ -44,7 +45,7 @@ private:
    char     ans[9];
 };
 
-void main( void ) {
+int main( void ) {
    Facade  f;
    char    a[9], b[9];
    while (1) {

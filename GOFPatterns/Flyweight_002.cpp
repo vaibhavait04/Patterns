@@ -14,8 +14,10 @@
 // should obtain them exclusively from a FlyweightFactory object to ensure
 // they are shared properly.
 
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+
+using namespace std; 
 
 class Icon {
 public:
@@ -101,7 +103,7 @@ public:
 };
 
 
-void main() {
+int main() {
 	DialogBox* dialogs[2];
 	dialogs[0] = new FileSelection(
 		FlyweightFactory::getIcon("go"),

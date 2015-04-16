@@ -1,5 +1,9 @@
 // Purpose.  Simulate a Persistent Object Pointer
 
+#include <iostream> 
+
+using namespace std; 
+
 template <typename TBD>
 class POP {          // Persistent Object Pointer
    string oid;
@@ -23,7 +27,7 @@ public:
    int    getAge()    { return 32; }
 };
 
-void main( void ) {
+int main( void ) {
    POP<Person> ph( "Tom" );
    cout << "policy holder is " << ph->getName() << ", age is " << ph->getAge() << '\n';
 }

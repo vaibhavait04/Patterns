@@ -1,3 +1,8 @@
+
+#include <iostream> 
+
+using namespace std; 
+
 class Obs;
 
 class Subject {
@@ -52,7 +57,7 @@ void ModObs::update() {
    cout << v << " mod " << div_
       << " is " << v % div_ << endl; }
 
-void main( void )
+int main( void )
 {
    Subject  subj;
    DivObs   divObs1( &subj, 4 );

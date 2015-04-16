@@ -1,3 +1,6 @@
+#include <iostream> 
+using namespace std; 
+
 class DateImp;
 
 class Date {
@@ -48,7 +51,7 @@ void Date::output() { rep_->output(); }
 
 #include "bridge2.inc"
 
-void main( void )
+int main( void )
 {
    Date  d1( 1996, 2, 29 );
    Date  d2( 1996, 2, 30 );

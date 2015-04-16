@@ -14,6 +14,7 @@
 #include <cstdlib> 
                
 using namespace std;                                      
+
 class H {                            
 public:                              
    H() {                             
@@ -39,7 +40,7 @@ private:
 };
 int H::count_ = 1;                   
                                      
-void main( void ) {                  
+int main( void ) {                  
    const int TOTAL = 2;              
    H* list[TOTAL] = { new H, new H };
                                      

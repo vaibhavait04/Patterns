@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 class Thousand;  class Hundred;  class Ten;  class One;
 
 class RNInterpreter {
@@ -81,7 +82,7 @@ One      RNInterpreter::ones;
    return total;
 }
 
-void main( void ) {
+int main( void ) {
    string  input;
    cout << "Enter Roman Numeral: ";
    while (cin >> input) {

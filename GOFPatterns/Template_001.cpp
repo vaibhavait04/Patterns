@@ -10,6 +10,9 @@
 // rithm, and needSwap() is the ab-
 // stract operation.
 
+#include <iostream> 
+using namespace std; 
+
 class Sort {  ////// Shell sort //////
 public:
    void doIt( int v[], int n ) {
@@ -37,7 +40,7 @@ class SortDown : public Sort {
       return (a < b); }
 };
 
-void main( void )
+int main( void )
 {
    const int NUM = 10;
    int       array[NUM];

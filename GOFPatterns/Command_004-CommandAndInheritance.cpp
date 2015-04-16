@@ -46,7 +46,7 @@ private:
    Action      method;
 };
 
-void main( void ) {
+int main( void ) {
    Command* portfolio[] = {  // old C cast, or new RTTI is required
       &Command( &IOU(100),   (int(Instrument::*)())&IOU::payUp ),
       &Command( &Check(200), static_cast<int(Instrument::*)()>(&Check::cash) ),

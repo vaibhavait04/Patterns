@@ -55,7 +55,7 @@ class C : public Base { public:
       cout << "first is C, second is C\n"; }
 };
 
-void main( void ) {
+int main( void ) {
    Base* array[] = { &A(), &B(), &C() };
    for (int i=0; i < 3; i++)
       for (int j=0; j < 3; j++)

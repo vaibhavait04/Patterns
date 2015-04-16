@@ -1,6 +1,10 @@
 #include <iostream>
 
 using namespace std; 
+//    Widget           factory 
+//   /    \/            /    \
+// Motif  Win      MotifFac  WinFac
+//
 
 class Widget { 
 public:
@@ -17,8 +21,8 @@ public:
    void draw() { cout << "WindowsBtn" << endl; }
 };
 
-class Factory { public:
-   virtual Widget* createBtn() = 0;
+class Factory { // Abstract Factory 
+public: virtual Widget* createBtn() = 0;
 };
 
 class MotifFactory : public Factory {

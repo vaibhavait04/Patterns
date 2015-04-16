@@ -9,6 +9,9 @@
 // more options and expressiveness.  The template approach offers mildly
 // better efficiency.
 
+#include <iostream> 
+using namespace std; 
+
 template<typename STRATEGY>
 class Stat {
 public:

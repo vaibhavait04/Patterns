@@ -12,10 +12,10 @@
 // exports a simple interface is        
 // desirable.                           
                                         
-#include <iostream.h>                   
+#include <iostream>                   
 #include <string.h>                     
 #define sl strlen
-                                        
+using namespace std;                
 class Compute {                         
 public:                                 
    char add( char a, char b, int& c) {  
@@ -29,7 +29,7 @@ public:
    }                                    
 };                                      
                                         
-void main( void ) {                     
+int main( void ) {                     
    Compute  tens, ones;                 
    char     a[9], b[9], c, d;           
    int      cary;                       

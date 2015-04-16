@@ -55,7 +55,7 @@ class ModObserver : public Observer { public:
       cout << v << " mod " << d << " is " << v % d << '\n';
 }  };
 
-void main( void ) {
+int main( void ) {
    Subject      subj;
    DivObserver  divObs1( &subj,4 );  // 7. Client configures the number and
    DivObserver  divObs2( &subj,3 );  //    type of Observers

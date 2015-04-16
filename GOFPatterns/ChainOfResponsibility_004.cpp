@@ -38,7 +38,7 @@ public:
 int   Link::theBid = 999;            // 4. Current bid and bidder
 Link* Link::bidder = 0;
 
-void main( void ) {
+int main( void ) {
    Link chain( 1 );
    for (int i=2; i < 7; i++)
       chain.addLast( new Link( i ) );

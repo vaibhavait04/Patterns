@@ -9,7 +9,8 @@
 // Context's current state explicitly.  A disadvantage of decentralization is
 // that State subclasses will be coupled to other sibling subclasses. [GOF308]
 
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class FSMstate { public:
    virtual void on()  { cout << "undefined combo" << endl; }
@@ -51,7 +52,7 @@ FSM::FSM() {
 enum     Message { On, Off, Ack };
 Message  messageArray[10] = { On,Off,Off,Ack,Ack,Ack,Ack,On,Off,Off };
 
-void main( void ) {
+int main( void ) {
    FSM  fsm;
    for (int i = 0; i < 10; i++) {
       if (messageArray[i] == On)        fsm.on();

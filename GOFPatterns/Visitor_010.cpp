@@ -90,7 +90,7 @@ void processCombine( Binary& first, Binary& second, Binary& third ) {
    first.combine( second, third );
 }
 
-void main( void ) {
+int main( void ) {
    Binary*  list[2] = { &Zero(), &One() };
 
    // Run through permutations

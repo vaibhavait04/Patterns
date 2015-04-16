@@ -49,7 +49,7 @@ void ON::off( Machine* m ) {
 
 Machine::Machine() { current = new OFF();  cout << '\n'; }
 
-void main( void ) {
+int main( void ) {
    void (Machine::*ptrs[])() = { Machine::off, Machine::on };
    Machine fsm;
    int num;

@@ -51,7 +51,7 @@ public:
       byTheNumbers();
 }  };
 
-void main( void ) {
+int main( void ) {
    SensorSystem ss;
    ss.attach( &Gates()        );
    ss.attach( &Lighting()     );

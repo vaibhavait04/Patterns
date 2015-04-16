@@ -3,9 +3,10 @@
 // Define a grammar for a language,     
 // and map each rule to a class.
                                         
-#include <iostream.h>                   
-#include <string.h>                     
-                                        
+#include <iostream>                   
+#include <string>                     
+using namespace std; 
+
 int sub(char* i, char* o, char* c) {    
    strcat(o, c);  strcpy(i, &(i[1]));   
    return 1; }                          
@@ -111,7 +112,7 @@ private:
    NP np;  Verb verb;	  
 };	  
 	  
-void main( void )	  
+int main( void )	  
 {	  
    Sent S;  char* t[] = {"ace","bdh",	  
                  "abc","ceg","bcfgh"};	  

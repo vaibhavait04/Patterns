@@ -14,7 +14,10 @@
 // "token" that gets transfered from
 // one holder to another, until some-  
 // one chooses to "execute" it.        
-                                       
+
+#include <iostream> 
+
+using namespace std; 
 class Deadbeat { public:               
    Deadbeat( int v ) { cash_ = v; }    
    int payUp( int v ) {                
@@ -49,7 +52,7 @@ private:
    int cash_;                          
 };                                     
                                        
-void main( void )                      
+int main( void )                      
 {                                      
    Deadbeat joe(90), tom(90);          
    IOU one ={&joe, &Deadbeat::payUp,60}

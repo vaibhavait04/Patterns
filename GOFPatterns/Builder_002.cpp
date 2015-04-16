@@ -14,7 +14,7 @@
 // end result from the builder.
 
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 #include <cstring> 
 
 using namespace std; 

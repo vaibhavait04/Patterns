@@ -42,7 +42,7 @@ class ScrollDecorator : public Decorator { public:  // 6. Optional embellishment
       cout << "   ScrollDecorator" << '\n';         //    and add extra stuff
 }  };
 
-void main( void ) {
+int main( void ) {
    // 8. Client has the responsibility to compose desired configurations
    Widget* aWidget = new BorderDecorator(
                         new BorderDecorator(

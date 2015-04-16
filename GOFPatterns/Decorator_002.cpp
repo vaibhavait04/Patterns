@@ -44,7 +44,7 @@ class Z : public D { public:
    /*virtual*/ void doIt() { D::doIt();  cout << 'Z'; }
 };
 
-void main( void ) {
+int main( void ) {
    I* anX = new X( new A );
    I* anXY = new Y( new X( new A ) );
    I* anXYZ = new Z( new Y( new X( new A ) ) );

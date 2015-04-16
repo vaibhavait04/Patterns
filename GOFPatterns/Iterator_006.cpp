@@ -91,7 +91,7 @@ public:
 
 Iterator* Composite::createIterator() { return new Iterator( this ); }
 
-void main( void ) {
+int main( void ) {
    Composite containers[4];
    for (int i=0; i < 4; i++)
       for (int j=0; j < 3; j++)

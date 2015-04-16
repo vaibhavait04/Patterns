@@ -57,7 +57,7 @@ class PowerMonitor : public On::Handler { public:
       cout << "PowerMonitor - ";  msg->start(); }
 };
 
-void main( void ) {
+int main( void ) {
    MasterConsole  mc;
    PowerMonitor   pm;
    On oneEvent( "lights" );  Off thrEvent( "elevators" );

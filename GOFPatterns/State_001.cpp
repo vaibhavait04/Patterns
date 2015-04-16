@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class Boss {
 public:
@@ -49,7 +50,7 @@ void Boss::decide() {
 void Boss::direct() {
    moods_[current_]->direct( this ); }
 
-void main( void )
+int main( void )
 {
    Boss ph;
    for (int i=0; i < 2; i++) {

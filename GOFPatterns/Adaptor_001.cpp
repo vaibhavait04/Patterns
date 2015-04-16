@@ -1,12 +1,8 @@
+#include <iostream>
+#include <cstdio>
+#include <ctime>
 
-
-
-
-
-
-#include <iostream.h>
-#include <stdio.h>
-#include <time.h>
+using namespace std; 
 
 class ManlyTime {
 public:
@@ -45,7 +41,7 @@ public:
    }
 };
 
-void main( void )
+int main( void )
 {
    WimpyTime  newT;
    char*      ptr;

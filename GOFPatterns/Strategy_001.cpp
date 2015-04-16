@@ -1,6 +1,8 @@
-#include <iostream.h>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std; 
 
 class SortImp;
 
@@ -44,7 +46,7 @@ void Stat::readVector(int v[], int n) {
    min_ = v[0];   max_ = v[n-1];
    med_ = v[n/2]; }
 
-void main( void )
+int main( void )
 {
    const int NUM = 9;
    int       array[NUM];

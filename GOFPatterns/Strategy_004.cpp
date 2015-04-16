@@ -6,7 +6,8 @@
 // the choice of implementation.
 
 #include <iostream>
-using std::cout;
+// using std::cout;
+using namespace std; 
 
 class SortImpl {
 public:

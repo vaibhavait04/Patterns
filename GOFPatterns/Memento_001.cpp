@@ -46,7 +46,7 @@ public:
 }  };                                     // stack is [ 0 1 2 3 4 5 6 7 8 9 ]
                                           // popping stack: 9 8 7 6 5 4 3 2 1 0
 // 1. main() is the "caretaker"           // stack is [ ]
-void main( void ) {                       // second is [ 0 1 2 3 4 5 6 7 8 9 ]    
+int main( void ) {                       // second is [ 0 1 2 3 4 5 6 7 8 9 ]    
    Stack s;                               // first is [ 0 1 2 3 4 ]
    for (int i=0; i < 5; i++) s.push( i ); // popping stack: 4 3 2 1 0
    cout << "stack is " << s << endl;      

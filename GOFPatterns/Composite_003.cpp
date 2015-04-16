@@ -39,7 +39,7 @@ class Column : public Composite { public:
       Composite::traverse();
 }  };
 
-void main( void ) {
+int main( void ) {
       Row    first( 1 );                     // Row1
       Column second( 2 );                    //   |
       Column third( 3 );                     //   +-- Col2

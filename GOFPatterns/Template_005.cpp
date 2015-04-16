@@ -55,7 +55,7 @@ class C : public B {
       A::stepFor();
 }  };
 
-void main( void ) {
+int main( void ) {
    C algorithm;
    algorithm.findSolution();
 }

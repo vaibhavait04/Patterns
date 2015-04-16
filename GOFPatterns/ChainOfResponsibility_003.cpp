@@ -44,7 +44,7 @@ public:
    /*virtual*/ void volunteer() { Component::volunteer(); }
 };
 
-void main( void ) {
+int main( void ) {
    srand( time( 0 ) );                             // 1
    Primitive seven( 7 );                           // |
    Primitive six( 6, &seven );                     // +-- 2

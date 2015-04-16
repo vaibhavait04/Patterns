@@ -48,7 +48,7 @@ public:                        //    tion promoted to "full object status"
       cout << name << " is listening" << endl;
 }  };
 
-void main( void ) {
+int main( void ) {
    // Fred will "execute" Barney which will result in a call to passOn()
    // Barney will "execute" Betty which will result in a call to gossip()
    // Betty will "execute" Wilma which will result in a call to listen()

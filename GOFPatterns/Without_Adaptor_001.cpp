@@ -13,7 +13,10 @@
 // to it.  On the right, private        
 // derivation is used to accomplish     
 // the same result.                     
-                                        
+ 
+#include <iostream> 
+using namespace std; 
+                                       
 class ManlyTime {                       
 public:                                 
    char* getTime() {                    
@@ -52,7 +55,7 @@ private:
    ManlyTime  imp_;                     
 };                                      
                                         
-void main( void )                       
+int main( void )                       
 {
    WimpyTime  newT;                     
    char*      ptr;                      

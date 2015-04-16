@@ -1,4 +1,6 @@
-#include <iostream.h>                  
+#include <iostream>                  
+using namespace std; 
+
 int  current = 0;                      
 enum CmdTyp { OnT, OffT };             
 
@@ -37,7 +39,7 @@ class Two : public State { public:
 
 State* states[] = { new One, new Two };
 
-void main( void )                      
+int main( void )                      
 {                                      
    Cmd* c[] = { new Off,               
         new On, new Off, new Off, 0 }; 

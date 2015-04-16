@@ -20,7 +20,10 @@
 // implementation of dynamic behavior   
 // that must change as internal state   
 // changes.
-                                        
+ 
+#include <iostream> 
+using namespace std; 
+                                       
 class Boss {                            
 public:                                 
    Boss() {                             
@@ -53,7 +56,7 @@ private:
    void toggle() { mood_ = ! mood_; }   
 };                                      
                                         
-void main( void )                       
+int main( void )                       
 {                                       
    Boss ph;                             
    for (int i=0; i < 2; i++)            

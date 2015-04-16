@@ -40,7 +40,7 @@ class Handler3 : public Base { public:
       else cout << "H3 handled " << i << "  ";
 }  };
 
-void main( void ) {
+int main( void ) {
    srand( time( 0 ) );
    Handler1 root;   Handler2 two;   Handler3 thr;
    root.add( &two );   root.add( &thr );

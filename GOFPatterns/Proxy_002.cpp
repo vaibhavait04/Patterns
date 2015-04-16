@@ -7,6 +7,10 @@
 //    (aka lazy intialization)
 // 5. The request is always delegated
 
+#include <iostream> 
+
+using namespace std; 
+
 class RealImage {
    int  id;
 public:
@@ -32,7 +36,7 @@ public:
 }  };
 int Image::next = 1;
 
-void main( void ) {
+int main( void ) {
    Image images[5];
    int   i;
 

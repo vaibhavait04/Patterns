@@ -1,4 +1,8 @@
-#include <iostream.h>
+
+#include <iostream>
+
+using namespace std; 
+
 class Visitor;
 
 class Color { public:
@@ -45,7 +49,7 @@ void Red::accept( Visitor& v ) {
 void Blu::accept( Visitor& v ) {
    v.visit( *this ); }
 
-void main( void )
+int main( void )
 {
    Color* set[] = { new Red, new Blu,
       new Blu, new Red, new Red, 0 };

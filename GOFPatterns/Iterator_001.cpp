@@ -61,7 +61,7 @@ bool operator==( const Stack& l, const Stack& r ) {
    return ans;
 }
 
-void main( void ) {
+int main( void ) {
    Stack  s1;
    for (int i=1; i < 5; i++) s1.push(i);
    Stack  s2( s1 ), s3( s1 ), s4( s1 ), s5( s1 );

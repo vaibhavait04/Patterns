@@ -10,7 +10,10 @@
 // Redo() "pops" the command history list.  Note that Number's encapsula-
 // tion is preserved, and Memento is wide open to Number.
 
-#include <iostream.h>
+#include <iostream>
+
+using namespace std; 
+
 class Number;
 
 class Memento {
@@ -73,7 +76,7 @@ Memento* Command::_mementoList[];
 int      Command::_numCommands = 0;
 int      Command::_highWater   = 0;
 
-void main() {
+int main() {
    int i;
    cout << "Integer: ";
    cin >> i;

@@ -70,7 +70,7 @@ class Publisher { public:            // 6. Sender sends to Mediator
    Publisher( Mediator& med ) { for (int i=1; i < 10; i++) med.disseminate(i); }
 };
 
-void main( void ) {
+int main( void ) {
    Mediator   mediator;
    OddObserver(   mediator,  1 );
    EvenObserver(  mediator, 11 );

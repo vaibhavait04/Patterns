@@ -56,7 +56,7 @@ public:
          is >> str;
 }  }  };
 
-void main( void ) {
+int main( void ) {
    Factory::add( "comp", new Composite() );
    Factory::add( "leaf", new Leaf() );
    ifstream is( "compositeCreate.txt" );

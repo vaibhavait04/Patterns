@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+
 using namespace std;
 
 template<class STRATEGY>
@@ -30,7 +31,7 @@ public:
 
 #include "strategy2.inc"
 
-void main( void ) {
+int main( void ) {
    const int NUM = 9;
    int       array[NUM];
    time_t    t;

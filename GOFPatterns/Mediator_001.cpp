@@ -1,6 +1,5 @@
-
-
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class Node {
 public:
@@ -42,7 +41,7 @@ private:
    int    num_;
 };
 
-void main( void )
+int main( void )
 {
    List  lst;
    Node  one( 11 ),  two( 22 );

@@ -14,8 +14,10 @@
 //   five ::= 'D' | 'L' | 'V'
 //   one  ::= 'M' | 'C' | 'X' | 'I'
 
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+
+using namespace std; 
 
 class Thousand;  class Hundred;  class Ten;  class One;
 
@@ -102,7 +104,7 @@ int RNInterpreter::interpret( char* input ) {
 	return total; }
 
 
-void main() {
+int main() {
 	RNInterpreter interpreter;
 	char          input[20];
 	cout << "Enter Roman Numeral: ";

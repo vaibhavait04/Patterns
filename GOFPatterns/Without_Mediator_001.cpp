@@ -11,8 +11,9 @@
 // the recursion (which does not scale  
 // up well) has been eliminated.
                                         
-#include <iostream.h>                   
-                                        
+#include <iostream>                   
+using namespace std; 
+
 class Node {                            
 public:                                 
    Node( int v, Node* n ) {             
@@ -48,7 +49,7 @@ private:
    }                                    
 };                                      
                                         
-void main( void )                       
+int main( void )                       
 {                                       
    Node  fou( 44, 0 );                  
    Node  thr( 33, &fou );               

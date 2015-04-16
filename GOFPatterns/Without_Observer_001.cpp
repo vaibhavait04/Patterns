@@ -16,7 +16,10 @@
 // casts that a change has occurred     
 // followed by Obs objects requesting   
 // just the info that they want.        
-                                        
+ 
+#include <iostream> 
+using namespace std; 
+                                       
 class DivObs { public:                  
    DivObs( int );                       
    void update( int );                  
@@ -56,7 +59,7 @@ void ModObs::update( int v ) {
    cout << v << " mod " << div_         
       << " is " << v % div_ << endl; }  
                                         
-void main( void )                       
+int main( void )                       
 {                                       
    Subject  subj;                       
    subj.setVal( 14 );                   

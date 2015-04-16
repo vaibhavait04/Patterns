@@ -13,7 +13,8 @@
 // an abstract base class.
 
 #include <iostream>
-using std::cout;
+using namespace std; 
+// using std::cout;
 
 class Stat {
 public:

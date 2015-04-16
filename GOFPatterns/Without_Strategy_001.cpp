@@ -9,7 +9,10 @@
 // late each one, and make them inter-
 // changeable" via an abstract base   
 // class.                             
-                                      
+ 
+#include <iostream> 
+using namespace std; 
+                                     
 class Stat {     /* Bubble sort */    
 public:                               
    void readVector( int v[], int n ) {
@@ -35,7 +38,7 @@ private:
    }                                  
 };
                                       
-void main( void )                     
+int main( void )                     
 {                                     
    const int NUM = 9;                 
    int       array[NUM];              

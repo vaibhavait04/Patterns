@@ -6,7 +6,8 @@
 // Commands.  No explicit receiver is required because the subcommands
 // already define their receiver.  MacroCommand may contain MacroCommands.
 
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class Number {
 public:
@@ -59,7 +60,7 @@ void MacroCommand::execute() {
 		_list[i]->execute();
 }
 
-void main() {
+int main() {
 	int i;
 	cout << "Integer: ";
 	cin >> i;

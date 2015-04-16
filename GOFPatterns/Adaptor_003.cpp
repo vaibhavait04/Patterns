@@ -5,7 +5,9 @@
 // 3. The client uses (is coupled to) the new interface
 // 4. The adapter/wrapper "maps" to the legacy implementation
 
-#include <iostream.h>
+#include <iostream>
+
+using namespace std; 
 
 class ExecuteInterface { public:                  // 1. Specify the new i/f
    virtual ~ExecuteInterface() { }
@@ -48,7 +50,7 @@ class Pheau { public:
    return array;
 }
 
-void main( void ) {
+int main( void ) {
    ExecuteInterface** objects = initialize();
 
    for (int i=0; i < 3; i++) objects[i]->execute();  // 3. Client uses the new

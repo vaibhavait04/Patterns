@@ -57,7 +57,7 @@ public:
    BST::Node* currentItem() { return array[index]; }
 };
 
-void main( void ) {
+int main( void ) {
    srand( time( 0 ) );
    BST  tree;
    for (int i=0; i < 20; i++) tree.add( rand() % 20 + 1 );
@@ -76,5 +76,24 @@ void main( void ) {
 // traverse: 1 2 3 7 8 9 9 10 11 11 13 14 14 14 15 17 18 19 19 20
 // iterator: 1 2 3 7 8 9 9 10 11 11 13 14 14 14 15 17 18 19 19 20
 // iterator: 1 2 3 7 8 9 9 10 11 11 13 14 14 14 15 17 18 19 19 20
+
+BST::Node::Node( int v ) { value = v;  left = rite = 0; }
+
+void BST::add( Node** n, int v ) {
+   if ( ! *n)                 { *n = new Node( v );  size++; }
+   else if (v <= (*n)->value) add( &((*n)->left), v );
+   else                       add( &((*n)->rite), v );
+}
+
+void BST::add( int v ) { add( &root, v ); }
+void BST::traverse() { traverse( root ); }
+
+void BST::traverse( Node* n ) {
+   if (n->left) traverse( n->left );
+   cout << n->value << ' ';
+   if (n->rite) traverse( n->rite );
+}
+
+Iterator* BST::createIterator() const { return new Iterator( this ); }
 
 

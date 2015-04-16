@@ -11,9 +11,10 @@
 // class.  Client can now specify at    
 // run-time exactly what s/he wants.    
                                         
-#include <iostream.h>                   
-#include <stdio.h>
-                                        
+#include <iostream>                   
+#include <cstdio>
+using namespace std; 
+
 class Date {                            
                                         
 public:
@@ -52,7 +53,7 @@ void Date::output() {
                                         
 #include "bridge1.inc"                  
                                         
-void main( void )                       
+int main( void )                       
 {                                       
    Date  d1( 1996, 2, 29 );             
    Date  d2( 1996, 2, 30 );             

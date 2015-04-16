@@ -1,14 +1,7 @@
 // Purpose.  Abstract Factory        
-//
-// Discussion.  Trying to maintain   
-// portability across multiple "plat-
-// forms" routinely requires lots of 
-// preprocessor "case" stmts.  The
-// Factory pattern suggests defining 
-// a creation services interface in a
-// Factory base class, and implement-
-// ing each "platform" in a separate 
-// Factory derived class.            
+// Discussion.  Trying to maintain portability across multiple "platforms" routinely requires lots of 
+// preprocessor "case" stmts.  The Factory pattern suggests defining a creation services interface in a
+// Factory base class, and implementing each "platform" in a separate Factory derived class.            
 
 #include <iostream>                
 

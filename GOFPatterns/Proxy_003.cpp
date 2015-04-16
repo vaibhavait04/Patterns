@@ -1,5 +1,8 @@
 // Purpose.  "->" and "." operators give different results
 
+#include <iostream> 
+using namespace std; 
+
 class Subject { public: virtual void execute() = 0; };
 
 class RealSubject : public Subject {
@@ -33,7 +36,7 @@ public:
    }
 };
 
-void main( void ) {
+int main( void ) {
    ProxySubject obj( string( "the quick brown fox jumped over the dog" ) );
    obj->execute();
    obj.execute();

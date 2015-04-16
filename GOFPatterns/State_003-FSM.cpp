@@ -85,7 +85,7 @@ int getCoin() {
    return choices[rand() % 3];
 }
 
-void main( void ) {
+int main( void ) {
    srand( time(0) );
    FSM fsm;
    int ans;

@@ -7,6 +7,12 @@
 // and File is gone, Dir is only
 // coupled to abstract base class)
 
+#include <iostream> 
+#include <cstdio>
+#include <cstdlib> 
+
+using namespace std; 
+
 class AbsFile {
 public:
    virtual void ls() = 0;
@@ -45,7 +51,7 @@ private:
    int       total_;
 };
 
-void main( void )
+int main( void )
 {
    Dir   one("1"), two("2"), thr("3");
    File  a("a"), b("b"), c("c"),

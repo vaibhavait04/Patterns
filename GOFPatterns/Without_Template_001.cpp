@@ -1,9 +1,10 @@
 // Purpose.  Template Method          
                                       
-#include <iostream.h>                 
-#include <stdlib.h>                   
-#include <time.h>                     
-                                      
+#include <iostream>                 
+#include <cstdlib>                   
+#include <ctime>                     
+using namespace std; 
+
 class SortUp {  ///// Shell sort /////
 public:                               
    void doIt( int v[], int n ) {      
@@ -34,7 +35,7 @@ private:
       int t = a; a = b; b = t; }      
 };                                    
                                       
-void main( void )                     
+int main( void )                     
 {                                     
    const int NUM = 10;
    int       array[NUM];              

@@ -27,8 +27,8 @@
 // Colors can be passed by address or  
 // passed by reference.]               
                                        
-#include <iostream.h>                  
-                                       
+#include <iostream>                  
+using namespace std;  
 class Color {                          
 public:                                
    virtual void count() = 0;           
@@ -54,7 +54,7 @@ class Blu : public Color { public:
    void sky() { cout << "Blu::sky\n";} 
 };                                     
                                        
-void main( void )                      
+int main( void )                      
 {                                      
    Color* set[] = { new Red, new Blu,
       new Blu, new Red, new Red, 0 };  

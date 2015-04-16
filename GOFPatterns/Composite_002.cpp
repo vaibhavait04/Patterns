@@ -33,7 +33,7 @@ public:
          children[i]->traverse();
 }  };
 
-void main( void ) {
+int main( void ) {
    Composite containers[4];
 
    for (int i=0; i < 4; i++)

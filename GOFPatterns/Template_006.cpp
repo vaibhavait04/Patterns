@@ -10,7 +10,8 @@
 // "calling-back" to the base class to leverage its implementation, and
 // then adding its own peculiar behavior.
 
-#include <iostream.h>
+#include <iostream>
+using namespace std; 
 
 class IncompleteAlgorithm {
 public:
@@ -38,7 +39,7 @@ class FillInTheTemplate : public IncompleteAlgorithm {
       cout << "FillInTheTemplate::stepFour" << endl; }
 };
 
-void main() {
+int main() {
    FillInTheTemplate  theThingToDo;
    theThingToDo.doIt();
 }

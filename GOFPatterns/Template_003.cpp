@@ -30,7 +30,7 @@ class Two : public Base {
    /*virtual*/ void ph2() { cout << "4  "; }
 };
 
-void main( void ) {
+int main( void ) {
    Base* array[] = { &One(), &Two() };
    for (int i=0; i < 2; i++) {
       array[i]->execute();

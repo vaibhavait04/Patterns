@@ -1,6 +1,8 @@
 // Purpose.  Composite                  
-                                        
-#include <string.h>                     
+#include <iostream> 
+#include <string.h>
+using namespace std; 
+                     
 enum NodeType { FileT, DirT };          
 int  g_indent = 0;                      
                                         
@@ -45,7 +47,7 @@ private:
    int       total_;                    
 };                                      
 
-void main( void )                       
+int main( void )                       
 {                                       
    Dir   one("1"), two("2"), thr("3");  
    File  a("a"), b("b"), c("c"),        

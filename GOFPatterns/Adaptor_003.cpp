@@ -55,7 +55,7 @@ int main( void ) {
 
    for (int i=0; i < 3; i++) objects[i]->execute();  // 3. Client uses the new
                                                      //    (polymporphism)
-   for (i=0; i < 3; i++) delete objects[i];
+   for (int i=0; i < 3; i++) delete objects[i];
    delete objects;
 }
 

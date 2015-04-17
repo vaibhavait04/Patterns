@@ -15,20 +15,20 @@
 // they are shared properly.
 
 #include <iostream>
-#include <string>
+#include <string.h>
 
 using namespace std; 
 
 class Icon {
 public:
-	Icon( char* fileName ) {
+	Icon( const char* fileName ) {
 		strcpy( _name, fileName );
 		if ( ! strcmp(fileName, "go"))     { _width = 20;  _height = 20; }
 		if ( ! strcmp(fileName, "stop"))   { _width = 40;  _height = 40; }
 		if ( ! strcmp(fileName, "select")) { _width = 60;  _height = 60; }
 		if ( ! strcmp(fileName, "undo"))   { _width = 30;  _height = 30; } }
 	const char* getName() { return _name; }
-	draw( int x, int y ) {
+	void draw( int x, int y ) {
 		cout << "   drawing " << _name << ": upper left (" << x << "," << y
 		<< ") - lower right (" << x + _width << "," << y + _height << ")"
 		<< endl; }
@@ -41,7 +41,7 @@ private:
 
 class FlyweightFactory {
 public:
-	static Icon* getIcon( char* name ) {
+	static Icon* getIcon( const char* name ) {
 		for (int i=0; i < _numIcons; i++)
 			if ( ! strcmp( name, _icons[i]->getName() ))
 				return _icons[i];

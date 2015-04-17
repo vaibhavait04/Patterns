@@ -8,7 +8,7 @@ int  g_indent = 0;
                                         
 class File {                            
 public:                                 
-   File( char* n ) { type_ = FileT;
+   File( const char* n ) { type_ = FileT;
       strcpy( name_, n ); }             
    NodeType getType() { return type_; } 
    void ls() {                          
@@ -22,7 +22,7 @@ private:
                                         
 class Dir {                             
 public:                                 
-   Dir( char* n ) { type_ = DirT;       
+   Dir( const char* n ) { type_ = DirT;       
       strcpy( name_, n ); total_ = 0; } 
    NodeType getType() { return type_; } 
    void add( File* f ) {                

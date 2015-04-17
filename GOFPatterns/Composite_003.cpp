@@ -49,11 +49,11 @@ int main( void ) {
       first.add( &third  );                  //   |     |
       third.add( &fourth );                  //   |     +-- Row4
       third.add( &fifth  );                  //   |     |     |
-      first.add(  &Primitive( 6 ) );         //   |     |     +-- 9
-      second.add( &Primitive( 7 ) );         //   |     +-- Row5
-      third.add(  &Primitive( 8 ) );         //   |     |     |
-      fourth.add( &Primitive( 9 ) );         //   |     |     +-- 10
-      fifth.add(  &Primitive(10 ) );         //   |     +-- 8
+      first.add(  new Primitive( 6 ) );         //   |     |     +-- 9
+      second.add( new Primitive( 7 ) );         //   |     +-- Row5
+      third.add(  new Primitive( 8 ) );         //   |     |     |
+      fourth.add( new Primitive( 9 ) );         //   |     |     +-- 10
+      fifth.add(  new Primitive(10 ) );         //   |     +-- 8
       first.traverse();  cout << '\n';       //   +-- 6
 }
 

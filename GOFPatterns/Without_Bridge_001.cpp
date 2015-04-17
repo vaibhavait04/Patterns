@@ -10,7 +10,10 @@
 // gates to a body (or implementation)  
 // class.  Client can now specify at    
 // run-time exactly what s/he wants.    
-                                        
+ 
+#define OK 
+// #define AA 
+                                       
 #include <iostream>                   
 #include <cstdio>
 using namespace std; 
@@ -18,8 +21,8 @@ using namespace std;
 class Date {                            
                                         
 public:
-   Date( int y, int m, int d );         
-   void output();                       
+   Date( int y, int m, int d ) {}
+   void output() ;                      
                                         
 private:                                
                                         
@@ -51,10 +54,10 @@ void Date::output() {
    cout << fromJulian() << "  "; }
 #endif                                  
                                         
-#include "bridge1.inc"                  
+//#include "bridge1.inc"                  
                                         
 int main( void )                       
-{                                       
+{                 
    Date  d1( 1996, 2, 29 );             
    Date  d2( 1996, 2, 30 );             
    d1.output();                         

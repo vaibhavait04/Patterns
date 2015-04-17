@@ -1,0 +1,18 @@
+all: Adaptor Bridge Composite Decorator Facade Flyweight Proxy Extras 
+
+Adaptor: Adaptor_001 Adaptor_002 Adaptor_003 Without_Adaptor_001
+
+Bridge: Bridge_001 Bridge_002 Without_Bridge_001
+
+Composite: Composite_001 Composite_002 Composite_003 Composite_004 Without_Composite_001
+
+Decorator: Decorator_001 Decorator_002 Decorator_003 Without_Decorator_002
+
+Facade: Facade_001 Facade_002 Without_Facade_001
+
+Flyweight: Flyweight_001 Flyweight_002 Without_Flyweight_001
+
+Proxy: Proxy_001 Proxy_002 Proxy_003 Proxy_004 Proxy_005
+
+Extras: Command_006-CommandAndAdaptor
+

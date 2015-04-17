@@ -10,7 +10,7 @@
 #include <iostream> 
 #include <cstdio>
 #include <cstdlib> 
-
+#include <string.h> 
 using namespace std; 
 
 class AbsFile {
@@ -24,7 +24,7 @@ int AbsFile::indent_ = 0;
 
 class File: public AbsFile {
 public:
-   File( char* n ) {
+   File( const char* n ) {
       strcpy( name_, n ); }
    void ls() {
       for (int i=0; i < indent_; i++)
@@ -34,7 +34,7 @@ public:
 
 class Dir : public AbsFile {
 public:
-   Dir( char* n ) {
+   Dir( const char* n ) {
       strcpy( name_, n ); total_ = 0; }
    void add( AbsFile* f ) {
       files_[total_++] = f; }

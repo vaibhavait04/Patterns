@@ -1,7 +1,14 @@
-all: AbstractFactory_001 Without_AbstractFactory_001 \
-Factory_001 Without_Factory_001 \
-Singleton_001 Singleton_002 Singleton_003 Singleton_004 Without_Singleton_001 Without_Singleton_002 Without_Singleton_003 \
-Prototype_001 Prototype_002 Prototype_003 Prototype_004 Without_Prototype_001 \
-Builder_001 Builder_002 Without_Builder_001
+all: AbstractFactory Factory Singleton Prototype Builder
+
+AbstractFactory: AbstractFactory_001 Without_AbstractFactory_001 
+
+Factory: Factory_001 Without_Factory_001 
+
+Singleton: Singleton_001 Singleton_002 Singleton_003 Singleton_004 Without_Singleton_001 Without_Singleton_002 Without_Singleton_003 
+
+Prototype: Prototype_001 Prototype_002 Prototype_003 Prototype_004 Without_Prototype_001 
+
+Builder: Builder_001 Builder_002 Without_Builder_001
+
 
 

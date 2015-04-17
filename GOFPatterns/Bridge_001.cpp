@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <string.h> 
 using namespace std; 
 
 class DateImp;
@@ -8,7 +9,7 @@ public:
    Date( int y, int m, int d );
    ~Date();
    void output();
-   static void setImp( char* t ) {
+   static void setImp( const char* t ) {
       strcpy( impType_, t ); }
 private:
    DateImp*    rep_;
@@ -22,16 +23,16 @@ class DateImp { public:
 
 class DateOk : public DateImp {
 public:
-   DateOk( int y, int m, int d );
-   void output();
+   DateOk( int y, int m, int d ):year_(y), month_(m), day_(d) {}
+   void output() {cout << "date Ok output " << year_ << " and " << month_ <<" and " << day_ <<  endl; }
 private:
    int  year_, month_, day_;
 };
 
 class DateAA : public DateImp {
 public:
-   DateAA( int y, int m, int d );
-   void output();
+   DateAA( int y, int m, int d ): year_(y), julian_(m){}
+   void output() {cout << "date AA output " << year_ << " and " << julian_ << endl; }
 private:
    int        toJulian(int,int,int);
    char*      fromJulian(void);
@@ -49,7 +50,7 @@ Date::Date( int y, int m, int d ) {
 Date::~Date()       { delete rep_; }
 void Date::output() { rep_->output(); }
 
-#include "bridge2.inc"
+//#include "bridge2.inc"
 
 int main( void )
 {

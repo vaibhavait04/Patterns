@@ -15,6 +15,8 @@
 // the same result.                     
  
 #include <iostream> 
+#include <cstdio> 
+#include <string.h> 
 using namespace std; 
                                        
 class ManlyTime {                       

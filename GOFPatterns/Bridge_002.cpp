@@ -14,7 +14,8 @@
 
 #include <iostream>
 #include <iomanip>
-#include <string>
+#include <string.h>
+#include <cstdio> 
 
 using namespace std; 
 
@@ -22,8 +23,9 @@ class TimeImp {
 public:
    TimeImp( int hr, int min ) {
       hr_ = hr;  min_ = min; }
-   virtual void tell() {
-      cout << "time is " << setw(2) << setfill(48) << hr_ << min_ << endl; }
+   virtual void tell() { 
+	cout << "time is " << setw(2) << setfill('0') << hr_ << min_ << endl; 
+   }
 protected:
    int hr_, min_;
 };
@@ -35,8 +37,9 @@ public:
          strcpy( whichM_, " PM" );
       else
          strcpy( whichM_, " AM" ); }
-   /* virtual */ void tell() {
-      cout << "time is " << hr_ << ":" << min_ << whichM_ << endl; }
+   /* virtual */ void tell() { 
+	cout << "time is " << hr_ << ":" << min_ << whichM_ << endl; 
+    }
 protected:
    char  whichM_[4];
 };
@@ -49,8 +52,8 @@ public:
       else if (zone == 6)
          strcpy( zone_, " Central Standard Time" ); }
    /* virtual */ void tell() {
-      cout << "time is " << setw(2) << setfill(48) << hr_ << min_ 
-         << zone_ << endl; }
+      cout << "time is " << setw(2) << setfill('0') << hr_ << min_ << zone_ << endl; 
+    }
 protected:
    char  zone_[30];
 };

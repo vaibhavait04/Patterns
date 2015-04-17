@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdio>
 #include <ctime>
-
+#include <string.h> 
 using namespace std; 
 
 class ManlyTime {

@@ -1,0 +1,25 @@
+all: ChainOfResponsibility Command Interpreter Iterator Mediator Memento Observer State Strategy Template Visitor 
+
+ChainOfResponsibility: ChainOfResponsibility_001 ChainOfResponsibility_002 ChainOfResponsibility_003 ChainOfResponsibility_004 Without-ChainOfResponsibility
+
+Command: Command_001 Command_002-CommandElements Command_003-SimpleVsMacroCommand Command_004-CommandAndInheritance \
+Command_005-CommandAndTemplate Command_006-CommandAndAdaptor Command_007-SimpleCommand Without_Command
+
+Interpreter: Interpreter_001 Interpreter_002-withTemplate
+
+Iterator: Iterator_001 Iterator_002 Iterator_003 Iterator_004 Iterator_006
+
+Mediator: Mediator_001 Mediator_002 Without_Mediator_001
+
+Memento: Memento_001 Memento_002
+
+Observer: Observer_001 Observer_002 Observer_003 Observer_004-ObserverMediator Observer_005 Without_Observer_001
+
+State: State_001 State_002-FSM State_003-FSM State_004-FSM Without_State_001
+
+Strategy: Strategy_001 Strategy_002 Strategy_003 Strategy_004 Strategy_005 Strategy_006 Without_Strategy_001 Without_Strategy_002
+
+Template: Template_001 Template_002 Template_003 Template_004 Template_005 Template_006 Template_007 Without_Template_001
+
+Visitor: Visitor_001 Visitor_002 Visitor_003 Visitor_004 Visitor_005 Visitor_006 Visitor_007 Visitor_008 Visitor_009 Visitor_010 Without_Visitor_001 Without_Visitor_002
+

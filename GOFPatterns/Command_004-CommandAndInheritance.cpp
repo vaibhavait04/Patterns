@@ -48,12 +48,11 @@ private:
 
 int main( void ) {
    Command* portfolio[] = {  // old C cast, or new RTTI is required
-      &Command( &IOU(100),   (int(Instrument::*)())&IOU::payUp ),
-      &Command( &Check(200), static_cast<int(Instrument::*)()>(&Check::cash) ),
-      &Command( &Stock(300), static_cast<int(Instrument::*)()>(&Stock::redeem) ) };
+      new Command( new IOU(100),   (int(Instrument::*)())&IOU::payUp ),
+      new Command( new Check(200), static_cast<int(Instrument::*)()>(&Check::cash) ),
+      new Command( new Stock(300), static_cast<int(Instrument::*)()>(&Stock::redeem) ) };
    for (int netWorth=0, i=0; i < 3; i++)
-      netWorth += portfolio[i]->execute();
-   cout << "net worth is now " << netWorth << '\n';
+      netWorth += portfolio[i]->execute(), cout << "net worth is now " << netWorth << '\n';
 }
 
 // net worth is now 600

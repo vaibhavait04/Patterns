@@ -41,7 +41,7 @@ private:
 class TheBoss {
 public:
    TheBoss() { cash_ = 1000; }
-   collect( Command& cmd ) {
+   void collect( Command& cmd ) {
       cash_ += cmd.execute(); }
    int rptCash() { return cash_; }
 private:
@@ -58,9 +58,9 @@ int main( void )
 
    don.collect( quido.collect() );
    don.collect( lucca.collect() );
-   cout << "joe has $" << joe.rptCash()
-   cout << "tom has $" << tom.rptCash()
-   cout << "don has $" << don.rptCash()
+   cout << "joe has $" << joe.rptCash() << endl;
+   cout << "tom has $" << tom.rptCash() << endl;
+   cout << "don has $" << don.rptCash() << endl; 
 }
 
 // joe has $30

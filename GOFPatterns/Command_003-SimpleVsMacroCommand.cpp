@@ -40,7 +40,7 @@ public:
 int main( void ) {
    Number object;
    Command* commands[3];
-   commands[0] = &SimpleCommand( &object, &Number::dubble );
+   commands[0] = new SimpleCommand( &object, &Number::dubble );
 
    MacroCommand two;
    two.add( commands[0] );   two.add( commands[0] );

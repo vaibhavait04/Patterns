@@ -22,6 +22,7 @@
 // 4. Clients use the first(), isDone(), next(), and currentItem() protocol
 
 #include <iostream>
+#include <string.h> 
 using namespace std;
 
 class Stack {

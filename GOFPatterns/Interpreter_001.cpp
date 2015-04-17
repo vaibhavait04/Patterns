@@ -4,7 +4,7 @@
 // and map each rule to a class.
                                         
 #include <iostream>                   
-#include <string>                     
+#include <string.h>                     
 using namespace std; 
 
 int sub(char* i, char* o, char* c) {    

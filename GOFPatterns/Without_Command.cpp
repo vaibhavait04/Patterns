@@ -43,9 +43,9 @@ private:
 class TheBoss {                        
 public:                                
    TheBoss() { cash_ = 1000; }         
-   collect( IOU& i ) {                 
+   void collect( IOU& i ) {                 
       cash_ +=                         
-         ((i.objPtr)->*i.funPtr)(i.amt)
+         ((i.objPtr)->*i.funPtr)(i.amt);
    }                                   
    int rptCash() { return cash_; }
 private:                               
@@ -55,16 +55,16 @@ private:
 int main( void )                      
 {                                      
    Deadbeat joe(90), tom(90);          
-   IOU one ={&joe, &Deadbeat::payUp,60}
-   IOU two ={&tom, &Deadbeat::payUp,70}
+   IOU one ={&joe, &Deadbeat::payUp,60};
+   IOU two ={&tom, &Deadbeat::payUp,70};
    Enforcer quido(one), lucca(two);    
    TheBoss  don;                       
                                        
    don.collect( quido.collect() );     
    don.collect( lucca.collect() );     
-   cout << "joe has $" << joe.rptCash()
-   cout << "tom has $" << tom.rptCash()
-   cout << "don has $" << don.rptCash()
+   cout << "joe has $" << joe.rptCash() << endl; 
+   cout << "tom has $" << tom.rptCash() << endl; 
+   cout << "don has $" << don.rptCash() << endl; 
 }                                      
 
 

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <ctime>
+#include <cstdlib> 
 using namespace std;
 
 class Link {
@@ -43,7 +44,7 @@ int main( void ) {
    for (int i=2; i < 7; i++)
       chain.addLast( new Link( i ) );
    srand( time( 0 ) );
-   for (i=0; i < 10; i++)
+   for (int i=0; i < 10; i++)
       chain.bid();                   // 3. Client "launches & leaves"
 }
 

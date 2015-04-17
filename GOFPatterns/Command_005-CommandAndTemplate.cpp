@@ -38,10 +38,10 @@ private:
 
 int main( void ) {
    Command<A,int>* list1[4] = {
-      &Command<A,int>( &A(3), &A::divide,  16 ),
-      &Command<A,int>( &A(3), &A::modulus, 16 ),
-      &Command<A,int>( &A(4), &A::divide,  16 ),
-      &Command<A,int>( &A(4), &A::modulus, 16 ) };
+      new Command<A,int>( new A(3), &A::divide,  16 ),
+      new Command<A,int>( new A(3), &A::modulus, 16 ),
+      new Command<A,int>( new A(4), &A::divide,  16 ),
+      new Command<A,int>( new A(4), &A::modulus, 16 ) };
    for (int i=0; i < 4; i++)
       cout << "numbers are " << list1[i]->execute() << '\n';
 
@@ -51,7 +51,7 @@ int main( void ) {
       new Command<B,string>( &obj, &B::prepend,  "xyz" ),
       new Command<B,string>( &obj, &B::postpend, "123" ),
       new Command<B,string>( &obj, &B::postpend, "xyz" ) };
-   for (i=0; i < 4; i++)
+   for (int i=0; i < 4; i++)
       cout << "strings are " << list2[i]->execute() << '\n';
 }
 

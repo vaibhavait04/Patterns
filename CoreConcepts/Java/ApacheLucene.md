@@ -1,4 +1,4 @@
-# Lucene in 5 minutes
+# Lucene Notes  
 
 Lucene is a full-text search library in Java which makes it easy to add search functionality to an application or website.
 The content you add to Lucene can be from various sources, like a SQL/NoSQL database, a filesystem, or even from websites.
@@ -12,6 +12,7 @@ Indexing involves adding Documents to an IndexWriter, and searching involves ret
 
 
 Example _HelloLucene_ in the repository shows the following: 
+
 1. Create Index 
 2. Query 
 3. Search 

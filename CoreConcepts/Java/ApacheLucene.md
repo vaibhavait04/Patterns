@@ -64,6 +64,7 @@ Using the Query we create a Searcher to search the index. Then a TopScoreDocColl
  
 ### 4. Display
 Now that we have results from our search, we display the results to the user.
+
 	System.out.println("Found " + hits.length + " hits.");
 	for(int i=0;i<hits.length;++i) {
 	    int docId = hits[i].doc;

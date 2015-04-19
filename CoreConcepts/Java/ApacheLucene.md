@@ -19,9 +19,10 @@ Example _HelloLucene_ in the repository shows the following:
 
 *** 
 
-1. Index
+### 1. Index
+
 For this simple case, we're going to create an in-memory index from some strings.
-`
+
 	StandardAnalyzer analyzer = new StandardAnalyzer();
 	Directory index = new RAMDirectory();
 
@@ -33,25 +34,25 @@ For this simple case, we're going to create an in-memory index from some strings
 	addDoc(w, "Managing Gigabytes", "55063554A");
 	addDoc(w, "The Art of Computer Science", "9900333X");
 	w.close();
-`
+
 addDoc() is what actually adds documents to the index:
-`
+
 	private static void addDoc(IndexWriter w, String title, String isbn) throws IOException {
 	  Document doc = new Document();
 	  doc.add(new TextField("title", title, Field.Store.YES));
 	  doc.add(new StringField("isbn", isbn, Field.Store.YES));
 	  w.addDocument(doc);
 	}
-`
+
 Note the use of TextField for content we want tokenized, and StringField for id fields and the like, which we don't want tokenized.
 
-2. Query
+### 2. Query
 We read the query from stdin, parse it and build a lucene Query out of it.
 
 	String querystr = args.length > 0 ? args[0] : "lucene";
 	Query q = new QueryParser(Version.LUCENE_40, "title", analyzer).parse(querystr);
  
-3. Search
+### 3. Search
 Using the Query we create a Searcher to search the index. Then a TopScoreDocCollector is instantiated to collect the top 10 scoring hits.
 
 	int hitsPerPage = 10;
@@ -61,7 +62,7 @@ Using the Query we create a Searcher to search the index. Then a TopScoreDocColl
 	searcher.search(q, collector);
 	ScoreDoc[] hits = collector.topDocs().scoreDocs;
  
-4. Display
+### 4. Display
 Now that we have results from our search, we display the results to the user.
 	System.out.println("Found " + hits.length + " hits.");
 	for(int i=0;i<hits.length;++i) {

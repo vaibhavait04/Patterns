@@ -7,8 +7,20 @@ To achieve fast searches, leucene creates a full-text index - allows you to perf
 Searching: Lucene is able to achieve fast search responses because, instead of searching the text directly, it searches an index instead.
 This type of index is called an inverted index, because it inverts a page-centric data structure (page->words) to a keyword-centric data structure (word->pages).
 
+Index and documents 
+
 An index consists of one or more Documents.  Document is the unit of search and index.
 Indexing involves adding Documents to an IndexWriter, and searching involves retrieving Documents from an index via an IndexSearcher.
+
+Fields
+A Document consists of one or more Fields. A Field is simply a name-value pair. Example: In the case of a title Field, the field name is title and the value is the title of that content item.
+
+Indexing 
+Indexing in Lucene involves creating _Documents_ comprising of one or more _Fields_, and adding these Documents to an _IndexWriter_.
+
+Searching 
+Involves creating a Query (usually via a QueryParser) and handing this Query to an IndexSearcher, which returns a list of Hits.
+
 
 
 Example _HelloLucene_ in the repository shows the following: 
@@ -73,5 +85,12 @@ Now that we have results from our search, we display the results to the user.
 	    System.out.println((i + 1) + ". " + d.get("isbn") + "\t" + d.get("title"));
 	}
  
+
+
+
+References: 
+
+1. [Lucene Tutorial](http://www.lucenetutorial.com/basic-concepts.html)
+2. [Lucene Query Syntax](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 

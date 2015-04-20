@@ -19,16 +19,17 @@ public:
         : pointer(p), refs(new std::size_t(1))
     {}
 
+    // Copy constructor - increase ref count 
     smart_pointer(const smart_pointer<T>& other)
         : pointer(other.pointer), refs(other.refs)
     {
         ++*refs;
     }
-    ~smart_pointer(){
-        clear();
-    }
+
+    ~smart_pointer(){ clear(); }
 
     smart_pointer<T>& operator=(const smart_pointer<T>& other){
+        // Common check for assignment operator 
         if (this != &other){
             clear();
 
@@ -40,6 +41,7 @@ public:
     }
 
     smart_pointer<T>& operator=(T* p){
+        // common check for assignment operator 
         if (pointer != p){
             pointer = p;
             *refs = 1;
@@ -47,25 +49,16 @@ public:
         return *this;
     }
 
-    T& operator*(){
-        return *pointer;
-    }
+    // Operator *  
+    T& operator*(){ return *pointer; }
+    const T& operator*() const{ return *pointer; }
 
-    const T& operator*() const{
-        return *pointer;
-    }
+    // Operator -> 
+    T* operator->(){ return pointer; }
+    const T* operator->() const{ return pointer; }
 
-    T* operator->(){
-        return pointer;
-    }
-
-    const T* operator->() const{
-        return pointer;
-    }
-
-    std::size_t getCounts(){
-        return *refs;
-    }
+    // Get the ref count 
+    std::size_t getCounts(){ return *refs; }
 };
 
 #endif 

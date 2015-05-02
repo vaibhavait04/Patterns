@@ -12,8 +12,7 @@ public:
       tm*     ltStruct;
       time( &lt );
       ltStruct = localtime(&lt);
-      strftime( buf, 30, "%H%M",
-         ltStruct );
+      strftime( buf, 30, "%H%M", ltStruct );
       return buf;
    }
 };
@@ -26,33 +25,31 @@ public:
       char *ptr, mi[3], am[3];
       int  hr;
       ptr = ManlyTime::getTime();
-      cout << "old interface time is "
-         << ptr << endl;
+      cout << "old interface time is " << ptr << endl;
+
       strcpy( mi, &(ptr[2]) );
       ptr[2] = '\0';
-      sscanf( ptr, "%d", &hr );
-      strcpy( am, "AM" );
+
+      sscanf( ptr, "%d", &hr ); strcpy( am, "AM" );
+
       if (hr > 12) {
          hr -= 12;
-         strcpy( am, "PM" ); }
-      sprintf( buf, "%d:%s %s",
-         hr, mi, am );
+         strcpy( am, "PM" ); 
+      }
+      sprintf( buf, "%d:%s %s", hr, mi, am );
       return buf;
    }
 };
 
-int main( void )
+int main()
 {
    WimpyTime  newT;
    char*      ptr;
    ptr = newT.getTime();
-   cout << "new interface time is "
-      << ptr << endl;
+   cout << "new interface time is " << ptr << endl;
 }
 
 // old interface time is 1721
 // new interface time is 5:21 PM
-
-
 
 

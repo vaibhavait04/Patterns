@@ -9,7 +9,9 @@
 // old implementation.
 
 #include <iostream>
+
 using namespace std; 
+
 typedef int Coordinate;
 typedef int Dimension;
 
@@ -31,10 +33,8 @@ public:
       cout << "LegacyRectangle:  oldDraw.  (" << x1_ << "," << y1_
          << ") => (" << x2_ << "," << y2_ << ")" << endl; }
 private:
-   Coordinate x1_;
-   Coordinate y1_;
-   Coordinate x2_;
-   Coordinate y2_;
+   Coordinate x1_; Coordinate y1_;
+   Coordinate x2_; Coordinate y2_;
 };
 
 /////////////////////////// Adapter wrapper ///////////////////////////
@@ -43,10 +43,12 @@ public:
    RectangleAdapter( Coordinate x, Coordinate y, Dimension w, Dimension h )
          : LegacyRectangle( x, y, x+w, y+h ) {
       cout << "RectangleAdapter: create.  (" << x << "," << y
-         << "), width = " << w << ", height = " << h << endl; }
+         << "), width = " << w << ", height = " << h << endl; 
+   }
    virtual void draw() {
       cout << "RectangleAdapter: draw." << endl;
-      oldDraw(); }
+      oldDraw(); 
+   }
 };
 
 int main() {

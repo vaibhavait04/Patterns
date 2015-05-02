@@ -90,7 +90,8 @@ Now that we have results from our search, we display the results to the user.
 
 References: 
 
-1. [Lucene Tutorial](http://www.lucenetutorial.com/basic-concepts.html)
-2. [Lucene Query Syntax](http://www.lucenetutorial.com/lucene-query-syntax.html)
+1. [Official Lucene Docs](http://lucene.apache.org/core/5_1_0/index.html)
+2. [Lucene Tutorial](http://www.lucenetutorial.com/basic-concepts.html)
+3. [Lucene Query Syntax](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 

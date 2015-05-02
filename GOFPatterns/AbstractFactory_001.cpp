@@ -38,13 +38,11 @@ public:
 Factory* factory; 
 
 void doThisWindow() { // create window, attach btn
-   Widget* w = factory->createBtn();
-   w->draw(); 
+   Widget* w = factory->createBtn(); w->draw(); 
 }
 
 void doThatWindow() { // create window, attach btn
-   Widget* w = factory->createBtn();
-   w->draw();
+   Widget* w = factory->createBtn(); w->draw();
 }
 
 int main() {

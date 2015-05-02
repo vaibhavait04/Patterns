@@ -27,17 +27,20 @@ private:
 };                                                //   attribute
 
 // The old: three totally incompatible classes    // no common base class,
-class Fea { public:                               // no hope of polymorphism
+class Fea { 
+public:                               // no hope of polymorphism
    ~Fea()        { cout << "Fea::dtor" << endl; }
    void doThis() { cout << "Fea::doThis()" << endl; }
 };
 
-class Feye { public:
+class Feye { 
+public:
    ~Feye()       { cout << "Feye::dtor" << endl; }
    void doThat() { cout << "Feye::doThat()" << endl; }
 };
 
-class Pheau { public:
+class Pheau { 
+public:
    ~Pheau()          { cout << "Pheau::dtor" << endl; }
    void doTheOther() { cout << "Pheau::doTheOther()" << endl; }
 };
@@ -53,8 +56,7 @@ class Pheau { public:
 int main( void ) {
    ExecuteInterface** objects = initialize();
 
-   for (int i=0; i < 3; i++) objects[i]->execute();  // 3. Client uses the new
-                                                     //    (polymporphism)
+   for (int i=0; i < 3; i++) objects[i]->execute();  // 3. Client uses the new (polymporphism)
    for (int i=0; i < 3; i++) delete objects[i];
    delete objects;
 }
